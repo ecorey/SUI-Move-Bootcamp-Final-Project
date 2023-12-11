@@ -1,11 +1,11 @@
 module bakery::bakery {
 
-    // imports
+    // IMPORTS
     use sui::object::{Self, UID};
     use sui::tx_context::{Self, TxContext};
     use sui::transfer;
     
-    // FLOUR OBJECT
+    // FLOUR OBJECT -----------------------------------------
     struct Flour has key , store{
        id: UID,
         
@@ -38,7 +38,7 @@ module bakery::bakery {
     }
 
     
-    // SALT OBJECT
+    // SALT OBJECT -----------------------------------------
     struct Salt has key, store {
        id: UID,
         
@@ -72,7 +72,7 @@ module bakery::bakery {
 
 
     
-    // YEAST OBJECT
+    // YEAST OBJECT -----------------------------------------
     struct Yeast has key, store {
        id: UID,
         
@@ -106,7 +106,7 @@ module bakery::bakery {
 
 
     
-    // DOUGH OBJECT
+    // DOUGH OBJECT -----------------------------------------
     struct Dough has key, store {
         id: UID,
         
@@ -159,7 +159,7 @@ module bakery::bakery {
 
 
     
-    // BREAD OBJECT
+    // BREAD OBJECT -----------------------------------------
     struct Bread has key, store {
         id: UID,
         
@@ -199,58 +199,59 @@ module bakery::bakery {
     }
 
     
-   // ------------------------------------
+   // ----------------------------------------------------
    // TESTS
-   // ------------------------------------
+   // ----------------------------------------------------
 
+    #[test_only] use sui::test_scenario as ts;
+
+    #[test_only] const ADMIN: address = @0xAD;
 
     #[test]
-    fun test_baking_process() {
+     public fun test_bakery() {
 
-        use sui::test_scenario;
-
-        
-        let admin = @0x123;
-        let baker = @0x456;
-
-        // Start test scenario
-        let scenario_val = test_scenario::begin(admin);
-        let scenario = &mut scenario_val;
+        let ts = ts::begin(@0x0);
 
         
-
-
-        // tx 1: Create flour, salt, and yeast
-        test_scenario::next_tx(scenario, baker);
+        // first transaction to emulate module initialization.
         {
+            ts::next_tx(&mut ts, ADMIN);
+            
+        };
+        
+
+        {
+            ts::next_tx(&mut ts, ADMIN);
+
             // Because the create functions are entry functions they do not return anything but transfer 
-            create_flour(test_scenario::ctx(scenario));
-            create_salt(test_scenario::ctx(scenario));
-            create_yeast(test_scenario::ctx(scenario));
+            create_flour(ts::ctx(&mut ts));
+            create_salt(ts::ctx(&mut ts));
+            create_yeast(ts::ctx(&mut ts));
 
             // Retrieve the objects from the sender's address
-            let flour = test_scenario::take_from_sender<Flour>(scenario);
-            let salt = test_scenario::take_from_sender<Salt>(scenario);
-            let yeast = test_scenario::take_from_sender<Yeast>(scenario);
+            let flour: Flour = ts::take_from_sender(&mut ts);
+            let salt: Salt = ts::take_from_sender(&mut ts);
+            let yeast: Yeast = ts::take_from_sender(&mut ts);            
 
             // Attempt to delete the objects and assert their existence
             delete_flour(flour);
             delete_salt(salt);
             delete_yeast(yeast);
 
-
         };
 
         // tx 2: Create dough
-        test_scenario::next_tx(scenario, baker);
+        
         {
-            let flour = test_scenario::take_from_sender<Flour>(scenario);
-            let salt = test_scenario::take_from_sender<Salt>(scenario);
-            let yeast = test_scenario::take_from_sender<Yeast>(scenario);
+            ts::next_tx(&mut ts, ADMIN);
 
-            create_dough(flour, salt, yeast, test_scenario::ctx(scenario));
+            let flour = ts::take_from_sender<Flour>(&mut ts);
+            let salt = ts::take_from_sender<Salt>(&mut ts);
+            let yeast = ts::take_from_sender<Yeast>(&mut ts);
 
-            let dough = test_scenario::take_from_sender<Dough>(scenario);
+            create_dough(flour, salt, yeast, ts::ctx(&mut ts));
+
+            let dough: Dough = ts::take_from_sender(&mut ts);
 
 
             // Ensure dough is created by deleting it
@@ -259,13 +260,12 @@ module bakery::bakery {
         };
 
         // tx 3: Create bread
-        test_scenario::next_tx(scenario, baker);
         {
-            let dough = test_scenario::take_from_sender<Dough>(scenario);
-            create_bread(dough, test_scenario::ctx(scenario));
+            let dough: Dough = ts::take_from_sender(&mut ts);
+            create_bread(dough, ts::ctx(&mut ts));
 
             // Ensure bread is created
-            let bread = test_scenario::take_from_sender<Bread>(scenario);
+            let bread: Bread = ts::take_from_sender(&mut ts);
 
 
             delete_bread(bread);
@@ -274,8 +274,7 @@ module bakery::bakery {
 
         };
 
-        test_scenario::end(scenario_val);
-
+        ts::end(ts);
     
         
     }
