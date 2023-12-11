@@ -15,7 +15,7 @@
 
 # The explanation of the project including the aim of the project:
 
-due to testing and building limitations many hours were spent setting up and resetting up the development environment and I could not ever get the 
+Due to testing and building limitations many hours were spent setting up and resetting up the development environment and I could not ever get the 
 environment working due to the Random.Move known bug. Being in the SUI Discord I see the issue is being resolved and work arounds have been proposed that have limited ability to fix the issue. (As of 12/11/23 is said to being fixed within a week of today).  I look forward to continuing to see the community grow and the flow of development improved.
 
 This is the beginning of my move journey and I would like to continue to modify and grow this project. 
