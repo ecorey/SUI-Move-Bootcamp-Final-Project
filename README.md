@@ -52,7 +52,8 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
         sui move build --skip-fetch-latest-git-deps
   
   Unfortunately this work around does not et you publish a contract sue to the same issue again:
-  ![fsilure to deploy](deploy.jpg)
+  
+  ![failure to deploy](deploy.jpg)
 
 
   This would be the command to publish a contract and then it ould be checked on the SUI explorer:
@@ -74,7 +75,8 @@ As a reuslt of the known bug and not getting the SUI binaries to properly instal
 The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
 
 First you need to set the Welldone wallet to developer mode.
-[welldoe\be developer](./de_welldone)
+
+![welldone developer](./de_welldone)
 
 Below it can be shown after the file is compiled it appears in the area marked by number 1. Then after deploying the contract the objects, functions, ext. become visible in the area marked with the number 2. 
 
