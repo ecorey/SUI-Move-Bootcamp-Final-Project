@@ -71,8 +71,18 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
 
 # How to set up the project. In this part, you can also share the following link for Move on Sui setup: Install Sui to Build | Sui Docs:
 
-As a reuslt of the known bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. 
-The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
+
+---
+---
+
+
+# How to run the project:
+
+To build a sui move project the normal command is:
+
+    sui move build
+    
+However, as a reuslt of the known bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
 
 First you need to set the Welldone wallet to developer mode.
 
@@ -89,17 +99,6 @@ Here is shown the creation of an object, Flour. Each of the objects, Flour, Salt
 After the object is created it can then be queried and the object details can be seen such as the UID for the particualt object. Below is a picture of querying the Flour object that was created above.
 
 ![flour object](./create_flour2.jpg)
----
----
-
-
-# How to run the project:
-
-The project can be run by first building the project woth 
-
-        sui move build
-   
-and the project can have the functions called using the Remix IDE with the Welldone wallet. The funcitons allow the for the creation and deletion of the objects in the file.
     
 ---
 ---
