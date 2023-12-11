@@ -12,7 +12,12 @@
 
 Welcome to the BAKERY, where to get that Bread, first you gotta make some Dough. 
 
-This project uses the SUI Move language to ...
+This project uses the SUI Move language to allow a user to create objects with the intention of finally creating the most rare object, Bread. 
+Currently each object is defined by a struct ahd with functions to allow the object to be created and transffered, as well as deconstructed and delted. 
+None of the objects have a sui price at the moment and a user needs to create a Flour, Salt, and Yeast object to call the create_dough funciton.
+When the create_dough funciton is called the Flour, Salt, and Yeast objects get deleted and the Dough object is created.
+When the user calls the create_bread function, they must have a Dough object, and they pass their Dough object to the create_Brad function which deconstructs
+and deletes the Dough object and returns a Bread object. 
 ---
 ---
 
@@ -22,8 +27,10 @@ Due to testing and building limitations many hours were spent setting up and res
 environment working due to the Random.Move known bug. Being in the SUI Discord I see the issue is being resolved and work arounds have been proposed that have limited ability to fix the issue. (As of 12/11/23 is said to being fixed within a week of today).  I look forward to continuing to see the community grow and the flow of development improved.
 
 This is the beginning of my move journey and I would like to continue to modify and grow this project. 
-would like to add a bakery object and then charge sui for minting an object. 
+would like to add a bakery object and then charge sui for minting an object, with Dough being expensive, and Bread the most expensive. 
 would like to build out frontend using Suiet library.
+would like to use the Display library and attach a url image ofr the objects.
+
 
 ---
 ---
