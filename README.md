@@ -36,7 +36,7 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
     //     random_bytes: vector[],
     // };
   
-    // let self = Rnadom {
+    // let self = Random {
     //     id: object::randomness_state(),
     //     inner: versioned::create(version, inner, ctx),
     // };
