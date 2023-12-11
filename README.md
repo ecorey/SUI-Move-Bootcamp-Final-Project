@@ -74,7 +74,7 @@ As a reuslt of the known bug and not getting the SUI binaries to properly instal
 The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
 
 First you need to set the Welldone wallet to developer mode.
-[welldoe\be developer](./)
+[welldoe\be developer](./de_welldone)
 
 Below it can be shown after the file is compiled it appears in the area marked by number 1. Then after deploying the contract the objects, functions, ext. become visible in the area marked with the number 2. 
 
