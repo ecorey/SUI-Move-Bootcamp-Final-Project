@@ -50,10 +50,6 @@ The workaround:
 
     sui move build --skip-fetch-latest-git-deps
 
-
-  To built Sui move package I would then use the command: 
-  
-        sui move build --skip-fetch-latest-git-deps
   
   Unfortunately this work around does not et you publish a contract sue to the same issue again:
   
