@@ -28,7 +28,11 @@ As a Windows/ Linux VM user after needing to reinstall the SUI binaries I have r
 
 Being on the SUI Discord and asking about the issue I see it is a known issue with some workarounds proposed, but I was unable to get them to work.
 
-The work around is to comment out these lines in the fun create(ctx: &mut TxContext) in the Random.Move file:
+The work around is to comment out these lines in the fun create(ctx: &mut TxContext) in the Random.Move file found at:
+
+    /home/userName/.move/https___github_com_MystenLabs_sui_git_framework__devnet/crates/sui-framework/packages/sui-framework/sources
+
+The workaround:
 
     // let inner = RandomInner {
     //     version, 
@@ -71,7 +75,19 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
 
 # How to set up the project. In this part, you can also share the following link for Move on Sui setup: Install Sui to Build | Sui Docs:
 
+  To install sui onto a Linux system or windows with wsl/ Ubuntu one follows the instructions found at:
 
+      https://docs.sui.io/guides/developer/getting-started/sui-install
+
+  Following the instructions first the prerequisites are installed for the OS then the binaries can be installed from source. 
+
+  Due to the current known bug currently the binaries from source have not been installing correctly for me and there is an error when building the binaries.
+  As a reult I used the --force flag on an older devnet version to be able to build a package on my machine after modifying the random.move file.
+  
+      cargo install --locked --git https://github.com/MystenLabs/sui.git --tag devnet-v1.13.0 sui --force
+  
+  The work around for the Random.Move file is explained above. 
+  
 ---
 ---
 
