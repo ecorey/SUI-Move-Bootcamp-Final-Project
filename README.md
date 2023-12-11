@@ -71,7 +71,7 @@ The workaround:
   
       !faucet 0xaddress
   
-  where the, 0xaddess is your wallet address. You can also import the account into the Welldone wallet using the wallet's mnemonic phrase, and then using the faucet 
+  Where the, 0xaddess is your wallet address. You can also import the account into the Welldone wallet using the wallet's mnemonic phrase, and then using the faucet 
   that is in the Welldone wallet through clicking the faucet icon.
 
 ---
