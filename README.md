@@ -10,6 +10,7 @@
 
 # Project Overview:
 
+Welcome to the BAKERY, where to get that Bread, first you gotta make some Dough. 
 ---
 ---
 
