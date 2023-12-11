@@ -51,20 +51,23 @@ The workaround:
     sui move build --skip-fetch-latest-git-deps
 
   
-  Unfortunately this work around does not et you publish a contract sue to the same issue again:
+  Unfortunately this work around does not allow you to publish a contract due to the random.move file being different to the on-chain version:
   
   ![failure to deploy](deploy.jpg)
 
 
-  This would be the command to publish a contract and then it ould be checked on the SUI explorer:
+  To publish a contract using the cli:
   
     sui client publish --gas-budget 10000000
    
   After the package is copiled it can be checked in the SUI explorer. To publish the package you also need to have an 
-  account with sui in it. When you first publish a package a new wallet is set up and to recieve sui to the devnet you 
-  can go to the sui discord and in the channel for the sui devent fauce enter the command, !faucet 0xaddress, where the 
-  0xaddess is your wallet address. You can also import the account into the welldone wallet and use the faucet that is 
-  in the welldone wallet by clicking the faucet icon.
+  account with a positve sui balance. When you first publish a package in VS Code a new wallet is set up and to recieve sui to the new devnet wallet you 
+  can go to the sui discord and in the channel for the sui devnet faucet enter the command:
+  
+      !faucet 0xaddress
+  
+  where the, 0xaddess is your wallet address. You can also import the account into the welldone wallet using the wallet's mnemonic phrase, and then using the faucet 
+  that is in the Welldone wallet through clicking the faucet icon.
 
 ---
 ---
