@@ -136,6 +136,9 @@ After the object is created it can then be queried and the object details can be
 
 # How to test the project.
 
+Unfortunately, one area where the Welldone wallet in Remix seemed to fall short in my experience was in testing. I could get a contract with tests to compile but I was unable to get the tests themselves to run which limited my development experience greatly. In the cli in Ubuntu using the following command in the project should run the unit tests below the #[test] statement:
+
     sui move test
 
-  will run the tests located at the bottom of the file. 
+As the Random.Move error becomes fixed I will be able to run and see the results from the unit test functions in the contract.
+
