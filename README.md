@@ -51,7 +51,11 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
   
         sui client publish --gas-budget 10000000
    
-  After the package is copiled it can be checked in the SUI explorer. 
+  After the package is copiled it can be checked in the SUI explorer. To publish the package you also need to have an 
+  account with sui in it. When you first publish a package a new wallet is set up and to recieve sui to the devnet you 
+  can go to the sui discord and in the channel for the sui devent fauce enter the command, !faucet 0xaddress, where the 
+  0xaddess is your wallet address. You can also import the account into the welldone wallet and use the faucet that is 
+  in the welldone wallet by clicking the faucet icon.
 
 ---
 ---
