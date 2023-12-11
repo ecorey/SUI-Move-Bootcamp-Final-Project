@@ -58,7 +58,7 @@ The workaround:
 
   This would be the command to publish a contract and then it ould be checked on the SUI explorer:
   
-        sui client publish --gas-budget 10000000
+    sui client publish --gas-budget 10000000
    
   After the package is copiled it can be checked in the SUI explorer. To publish the package you also need to have an 
   account with sui in it. When you first publish a package a new wallet is set up and to recieve sui to the devnet you 
@@ -117,7 +117,7 @@ After the object is created it can then be queried and the object details can be
 
 # How to test the project.
 
-        sui move test
+    sui move test
 
   will run the tests located at the bottom of the file. 
 
