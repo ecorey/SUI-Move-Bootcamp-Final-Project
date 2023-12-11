@@ -142,3 +142,7 @@ Unfortunately, one area where the Welldone wallet in Remix seemed to fall short 
 
 As the Random.Move error becomes fixed I will be able to run and see the results from the unit test functions in the contract.
 
+![test 1](./test1.jpg)
+![test 2](./test2.jpg)
+![test 3](./test3.jpg)
+
