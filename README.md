@@ -73,14 +73,14 @@ The workaround:
 
   To install sui onto a Linux system or windows with wsl/ Ubuntu one follows the instructions found at:
 
-      https://docs.sui.io/guides/developer/getting-started/sui-install
+    https://docs.sui.io/guides/developer/getting-started/sui-install
 
   Following the instructions first the prerequisites are installed for the OS then the binaries can be installed from source. 
 
   Due to the current known bug currently the binaries from source have not been installing correctly for me and there is an error when building the binaries.
   As a reult I used the --force flag on an older devnet version to be able to build a package on my machine after modifying the random.move file.
   
-      cargo install --locked --git https://github.com/MystenLabs/sui.git --tag devnet-v1.13.0 sui --force
+    cargo install --locked --git https://github.com/MystenLabs/sui.git --tag devnet-v1.13.0 sui --force
   
   The work around for the Random.Move file is explained above. 
   
