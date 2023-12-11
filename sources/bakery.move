@@ -217,9 +217,7 @@ module bakery::bakery {
         let scenario_val = test_scenario::begin(admin);
         let scenario = &mut scenario_val;
 
-         {
-            init(test_scenario::ctx(scenario));
-        };
+        
 
 
         // tx 1: Create flour, salt, and yeast
