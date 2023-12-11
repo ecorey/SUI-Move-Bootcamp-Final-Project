@@ -63,11 +63,16 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
 **How to set up the project. In this part, you can also share the following link for Move on Sui setup: Install Sui to Build | Sui Docs**
 
 As a reuslt of the knwon bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. 
-The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions.
+The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
+Below it can be shown after the file is compiled it appears in the area marked by number 1. Then after deploying the contract the objects, functions, ext. become visible in the area marked with the number 2. 
 
 ![deployed on remix](./deployed.jpg)
 
+Here is shown the creation of an object, Flour. Each of the objects, Flour, Salt, Yeast, Dough, and Bread are structurally very similar minus the fact it takes the objects of Flour, Salt, and Yeast to make Dough, and it takes Dough to make the Bread object. 
+
 ![flour created](./create_flour1.jpg)
+
+After the object is created it can then be queried and the object details can be seen such as the UID for the particualt object. Below is a picture of querying the Flour object that was created above.
 
 ![flour object](./create_flour2.jpg)
 ---
