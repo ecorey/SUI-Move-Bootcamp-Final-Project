@@ -1,4 +1,4 @@
-module bakery::bakery {
+module SUI_Move_Bootcamp_Final_Project::bakery {
 
     // IMPORTS
     use sui::object::{Self, UID};
