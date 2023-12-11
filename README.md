@@ -15,7 +15,10 @@
 
 # The explanation of the project including the aim of the project:
 
-
+due to testing and builfding limitations many hours were spent settingup and resetting up the development environment and I could not ever get the 
+environemnt working due to the Random.Move known bug. Being in the SUI Discord I see the issue is being resolved and work arounds have been proposed that have limited abilit to fix the issue. I look forward to continuing to see the community grow and the the flow of develppment improved.. 
+would like to add a bakery object and then charge sui for minting an object. 
+would like to build out frontend ussing Suiet library.
 
 ---
 ---
