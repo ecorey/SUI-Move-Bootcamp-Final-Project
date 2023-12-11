@@ -15,17 +15,18 @@
 
 # The explanation of the project including the aim of the project:
 
-due to testing and builfding limitations many hours were spent settingup and resetting up the development environment and I could not ever get the 
-environemnt working due to the Random.Move known bug. Being in the SUI Discord I see the issue is being resolved and work arounds have been proposed that have limited abilit to fix the issue. I look forward to continuing to see the community grow and the the flow of develppment improved.. 
+due to testing and building limitations many hours were spent setting up and resetting up the development environment and I could not ever get the 
+environment working due to the Random.Move known bug. Being in the SUI Discord I see the issue is being resolved and work arounds have been proposed that have limited ability to fix the issue. I look forward to continuing to see the community grow and the flow of development improved.. 
+This is the beginning of my move journey and I would like to continue to modify and grow this project. 
 would like to add a bakery object and then charge sui for minting an object. 
-would like to build out frontend ussing Suiet library.
+would like to build out frontend using Suiet library.
 
 ---
 ---
 
 # The devnet contract address:
 
-As a Windows/ Linux VM user after needing to reinstall the SUI binaries I have recieved the known error pertaining to the Random.Move file. 
+As a Windows/ Linux VM user after needing to reinstall the SUI binaries I have received the known error pertaining to the Random.Move file. 
 
 ![known error without fix](./Screenshot1.jpg)
 
@@ -63,13 +64,13 @@ The workaround:
   
     sui client publish --gas-budget 10000000
    
-  After the package is copiled it can be checked in the SUI explorer. To publish the package you also need to have an 
-  account with a positve sui balance. When you first publish a package in VS Code a new wallet is set up and to recieve sui to the new devnet wallet you 
+  After the package is compiled it can be checked in the SUI explorer. To publish the package you also need to have an 
+  account with a positive sui balance. When you first publish a package in VS Code a new wallet is set up and to receive sui to the new devnet wallet you 
   can go to the sui discord and in the channel for the sui devnet faucet enter the command:
   
       !faucet 0xaddress
   
-  where the, 0xaddess is your wallet address. You can also import the account into the welldone wallet using the wallet's mnemonic phrase, and then using the faucet 
+  where the, 0xaddess is your wallet address. You can also import the account into the Welldone wallet using the wallet's mnemonic phrase, and then using the faucet 
   that is in the Welldone wallet through clicking the faucet icon.
 
 ---
@@ -84,7 +85,7 @@ The workaround:
   Following the instructions first the prerequisites are installed for the OS then the binaries can be installed from source. 
 
   Due to the current known bug currently the binaries from source have not been installing correctly for me and there is an error when building the binaries.
-  As a reult I used the --force flag on an older devnet version to be able to build a package on my machine after modifying the random.move file.
+  As a result I used the --force flag on an older devnet version to be able to build a package on my machine after modifying the Random.Move file.
   
     cargo install --locked --git https://github.com/MystenLabs/sui.git --tag devnet-v1.13.0 sui --force
   
@@ -100,7 +101,7 @@ To build a sui move project the normal command is:
 
     sui move build
     
-However, as a reuslt of the known bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
+However, as a result of the known bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to create a multitude of template projects but I chose the basic which created an empty source folder and an empty Move.toml file. The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
 
 First you need to set the Welldone wallet to developer mode.
 
@@ -114,7 +115,7 @@ Here is shown the creation of an object, Flour. Each of the objects, Flour, Salt
 
 ![flour created](./create_flour1.jpg)
 
-After the object is created it can then be queried and the object details can be seen such as the UID for the particualt object. Below is a picture of querying the Flour object that was created above.
+After the object is created it can then be queried and the object details can be seen such as the UID for the particular object. Below is a picture of querying the Flour object that was created above.
 
 ![flour object](./create_flour2.jpg)
     
@@ -126,4 +127,3 @@ After the object is created it can then be queried and the object details can be
     sui move test
 
   will run the tests located at the bottom of the file. 
-
