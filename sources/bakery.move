@@ -6,6 +6,7 @@ module bakery::bakery {
     use sui::transfer;
 
 
+
     // FLOUR OBJECT -----------------------------------------
     struct Flour has key , store{
        id: UID,
@@ -40,7 +41,8 @@ module bakery::bakery {
         object::delete(id);
     }
 
-    
+
+
     // SALT OBJECT -----------------------------------------
     // follows the same structure as the Flour object
     struct Salt has key, store {
@@ -74,11 +76,11 @@ module bakery::bakery {
     }
 
 
+
     // YEAST OBJECT -----------------------------------------
     // follows the same structure as the Flour object
     struct Yeast has key, store {
-       id: UID,
-        
+       id: UID,        
     }
 
     
@@ -105,6 +107,7 @@ module bakery::bakery {
         
         object::delete(id);
     }
+
 
 
     // DOUGH OBJECT -----------------------------------------
@@ -200,6 +203,7 @@ module bakery::bakery {
         object::delete(id);
     }
 
+
     
    // ----------------------------------------------------
    // TESTS
@@ -215,7 +219,6 @@ module bakery::bakery {
 
         let ts = ts::begin(@0x0);
 
-        
         // first transaction to emulate module initialization.
         {
             ts::next_tx(&mut ts, ADMIN);
