@@ -1,9 +1,9 @@
 [package]
-name = "bakery"
+name = "SUI_Move_Bootcamp_Final_Project"
 version = "0.0.1"
 
 [dependencies]
 Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/devnet" }
 
 [addresses]
-bakery = "0x0"
+SUI_Move_Bootcamp_Final_Project = "0x0"
