@@ -219,7 +219,7 @@ module bakery::bakery {
             
         };
         
-
+        // tx 2: Create Flour, Salt, Yeast
         {
             ts::next_tx(&mut ts, ADMIN);
 
@@ -240,7 +240,7 @@ module bakery::bakery {
 
         };
 
-        // tx 2: Create dough
+        // tx 3: Create Dough
         
         {
             ts::next_tx(&mut ts, ADMIN);
@@ -259,7 +259,7 @@ module bakery::bakery {
 
         };
 
-        // tx 3: Create bread
+        // tx 4: Create Bread
         {
             let dough: Dough = ts::take_from_sender(&mut ts);
             create_bread(dough, ts::ctx(&mut ts));
