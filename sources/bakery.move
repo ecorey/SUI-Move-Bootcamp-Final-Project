@@ -11,7 +11,7 @@ module bakery::bakery {
         
     }
 
-    
+    // function to create a new object and return the object, as a public entry fun can transfer but not return an object
     fun new_flour( ctx: &mut TxContext): Flour {
         Flour {
           
@@ -39,6 +39,7 @@ module bakery::bakery {
 
     
     // SALT OBJECT -----------------------------------------
+    // follows the same structure as the Flour object
     struct Salt has key, store {
        id: UID,
         
@@ -73,6 +74,7 @@ module bakery::bakery {
 
     
     // YEAST OBJECT -----------------------------------------
+    // follows the same structure as the Flour object
     struct Yeast has key, store {
        id: UID,
         
@@ -107,13 +109,14 @@ module bakery::bakery {
 
     
     // DOUGH OBJECT -----------------------------------------
+    // follows the same structure as the Flour object with the exception of the create_dough function
     struct Dough has key, store {
         id: UID,
         
     }
 
     
-    // function to create the dough object and transfer it
+    // function to take in Flour, Salt, and Yeast objects, delete them and create the dough object and transfer it to the caller of the function
     public entry fun create_dough(flour: Flour, salt: Salt, yeast: Yeast, ctx: &mut TxContext) {
         
          let Flour {
@@ -160,12 +163,13 @@ module bakery::bakery {
 
     
     // BREAD OBJECT -----------------------------------------
+    // follows the same structure as the Flour object with the exception of the create_bread function
     struct Bread has key, store {
         id: UID,
         
     }
 
-    // function to create the bread object and return it
+    // function to take in Dough object, delete them and create the bread object and transfer it to the caller of the function
     public entry fun create_bread(dough: Dough, ctx: &mut TxContext) {
         
          let Dough {
