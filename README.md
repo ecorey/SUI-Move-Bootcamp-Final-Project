@@ -29,7 +29,7 @@ The aim of the project is to demonstrate exchanging several objects for another 
 Due to testing and building limitations many hours were spent setting up and resetting up the development environment and I could not ever get the 
 environment working due to the Random.Move known bug. (As of 12/11/23 is said to being fixed within a week of today). This slowed down development on the next step of this project which is to create a sharable object bakery that will accept Sui din exchange for creating the objects, and the admin object passed in the contracts init function will enable the contract deployer to access the funds from the bakery. The next step then is to build out frontend using Suiet library and use the Display library recently released by Sui to and attach a URL images for the objects demonstrating their progression in rarity with Bread being the most rare.
 
-![bread king](./bread.jpg)
+![bread king](./bread.png)
 
 ---
 ---
