@@ -4,12 +4,14 @@ module bakery::bakery {
     use sui::object::{Self, UID};
     use sui::tx_context::{Self, TxContext};
     use sui::transfer;
-    
+
+
     // FLOUR OBJECT -----------------------------------------
     struct Flour has key , store{
        id: UID,
         
     }
+
 
     // function to create a new object and return the object, as a public entry fun can transfer but not return an object
     fun new_flour( ctx: &mut TxContext): Flour {
@@ -26,7 +28,8 @@ module bakery::bakery {
         let flour = new_flour(ctx);
         transfer::transfer(flour, tx_context::sender(ctx))
     }   
- 
+
+
     // function to deconstruct and delete the flour object
     public entry fun delete_flour(flour: Flour) {
 
@@ -55,7 +58,6 @@ module bakery::bakery {
     }
 
 
-    
     public entry fun create_salt(ctx: &mut TxContext) {
         let salt = new_salt(ctx);
         transfer::transfer(salt, tx_context::sender(ctx))
@@ -72,7 +74,6 @@ module bakery::bakery {
     }
 
 
-    
     // YEAST OBJECT -----------------------------------------
     // follows the same structure as the Flour object
     struct Yeast has key, store {
@@ -90,7 +91,6 @@ module bakery::bakery {
     }
 
 
-    
     public entry fun create_yeast(ctx: &mut TxContext) {
         let yeast = new_yeast(ctx);
         transfer::transfer(yeast, tx_context::sender(ctx))
@@ -107,7 +107,6 @@ module bakery::bakery {
     }
 
 
-    
     // DOUGH OBJECT -----------------------------------------
     // follows the same structure as the Flour object with the exception of the create_dough function
     struct Dough has key, store {
@@ -160,7 +159,6 @@ module bakery::bakery {
         object::delete(id);
     }
 
-
     
     // BREAD OBJECT -----------------------------------------
     // follows the same structure as the Flour object with the exception of the create_bread function
@@ -168,6 +166,7 @@ module bakery::bakery {
         id: UID,
         
     }
+
 
     // function to take in Dough object, delete them and create the bread object and transfer it to the caller of the function
     public entry fun create_bread(dough: Dough, ctx: &mut TxContext) {
@@ -191,7 +190,6 @@ module bakery::bakery {
         }
     }
 
-    
 
     public entry fun delete_bread(bread: Bread) {
         
@@ -206,6 +204,7 @@ module bakery::bakery {
    // ----------------------------------------------------
    // TESTS
    // ----------------------------------------------------
+
 
     #[test_only] use sui::test_scenario as ts;
 
@@ -222,7 +221,8 @@ module bakery::bakery {
             ts::next_tx(&mut ts, ADMIN);
             
         };
-        
+
+
         // tx 2: Create Flour, Salt, Yeast
         {
             ts::next_tx(&mut ts, ADMIN);
@@ -244,6 +244,7 @@ module bakery::bakery {
 
         };
 
+
         // tx 3: Create Dough
         
         {
@@ -263,6 +264,7 @@ module bakery::bakery {
 
         };
 
+
         // tx 4: Create Bread
         {
             let dough: Dough = ts::take_from_sender(&mut ts);
@@ -274,12 +276,9 @@ module bakery::bakery {
 
             delete_bread(bread);
 
-            
-
         };
 
         ts::end(ts);
-    
         
     }
 
