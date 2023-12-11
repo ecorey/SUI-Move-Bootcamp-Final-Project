@@ -10,7 +10,7 @@
 
 # Project Overview:
 
-Welcome to the BAKERY, where to get that Bread, first you gotta’ make some Dough. 
+Welcome to the BAKERY, where to get that BREAD, first you gotta’ make some DOUGH. 
 
 This project uses the SUI Move language to allow a user to create objects with the intention of finally creating the rarest object, Bread. 
 Currently each object is defined by a struct and with functions to allow the object to be created and transferred, as well as deconstructed and deleted. 
