@@ -24,13 +24,11 @@ and deletes the Dough object and returns a Bread object.
 
 # The explanation of the project including the aim of the project:
 
-Due to testing and building limitations many hours were spent setting up and resetting up the development environment and I could not ever get the 
-environment working due to the Random.Move known bug. Being in the SUI Discord I see the issue is being resolved and work arounds have been proposed that have limited ability to fix the issue. (As of 12/11/23 is said to being fixed within a week of today).  I look forward to continuing to see the community grow and the flow of development improved.
+The aim of the project is to demonstrate exchanging several objects for another object while deleting the first objects, thus creating the illusion of transforming objects. In this project the goal is to be able to create simple objects and progressively transform them into more complex, and rare objects. The Flour, Salt, and Yeast can be transformed into Dough which can then be transformed into Bread.
 
-This is the beginning of my move journey and I would like to continue to modify and grow this project. 
-would like to add a bakery object and then charge sui for minting an object, with Dough being expensive, and Bread the most expensive. 
-would like to build out frontend using Suiet library.
-would like to use the Display library and attach a url image ofr the objects.
+Due to testing and building limitations many hours were spent setting up and resetting up the development environment and I could not ever get the 
+environment working due to the Random.Move known bug. (As of 12/11/23 is said to being fixed within a week of today). This slowed down development on the next step of this project which is to create a sharable object bakery that will accept Sui din exchange for creating the objects, and the admin object passed in the contracts init function will enable the contract deployer to access the funds from the bakery. The next step then is to build out frontend using Suiet library and use the Display library recently released by Sui to and attach a URL images for the objects demonstrating their progression in rarity with Bread being the most rare.
+
 
 
 ---
