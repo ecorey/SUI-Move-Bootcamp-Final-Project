@@ -62,10 +62,14 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
 
 **How to set up the project. In this part, you can also share the following link for Move on Sui setup: Install Sui to Build | Sui Docs**
 
-  - As a reuslt of the knwon bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. 
-  The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions.
+As a reuslt of the knwon bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. 
+The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions.
 
+![deployed on remix](./deployed.jpg)
 
+![flour created](./create_flour1.jpg)
+
+![flour object](./create_flour2.jpg)
 ---
 ---
 
