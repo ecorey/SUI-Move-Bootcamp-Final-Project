@@ -10,14 +10,15 @@
 
 # Project Overview:
 
-Welcome to the BAKERY, where to get that Bread, first you gotta make some Dough. 
+Welcome to the BAKERY, where to get that Bread, first you ‘gotta’ make some Dough. 
 
-This project uses the SUI Move language to allow a user to create objects with the intention of finally creating the most rare object, Bread. 
-Currently each object is defined by a struct ahd with functions to allow the object to be created and transffered, as well as deconstructed and delted. 
-None of the objects have a sui price at the moment and a user needs to create a Flour, Salt, and Yeast object to call the create_dough funciton.
-When the create_dough funciton is called the Flour, Salt, and Yeast objects get deleted and the Dough object is created.
-When the user calls the create_bread function, they must have a Dough object, and they pass their Dough object to the create_Brad function which deconstructs
-and deletes the Dough object and returns a Bread object. 
+This project uses the SUI Move language to allow a user to create objects with the intention of finally creating the rarest object, Bread. 
+Currently each object is defined by a struct and with functions to allow the object to be created and transferred, as well as deconstructed and deleted. 
+None of the objects have a sui price at the moment and a user needs to create a Flour, Salt, and Yeast object to call the create_dough function.
+When the create_dough function is called the Flour, Salt, and Yeast objects get deleted and the Dough object is created.
+When the user calls the create_bread function, they must have a Dough object, and they pass their Dough object to the create_bread function which deconstructs
+and deletes the Dough object and returns a Bread object.
+
 ---
 ---
 
