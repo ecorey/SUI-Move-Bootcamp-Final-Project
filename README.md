@@ -13,9 +13,9 @@
 Welcome to the BAKERY, where to get that BREAD, first you gotta’ make some DOUGH. 
 
 This project uses the SUI Move language to allow a user to create objects with the intention of finally creating the rarest object, Bread. 
-Currently each object is defined by a struct and with functions to allow the object to be created and transferred, as well as deconstructed and deleted. 
-None of the objects have a sui price at the moment and a user needs to create a Flour, Salt, and Yeast object to call the create_dough function.
-When the create_dough function is called the Flour, Salt, and Yeast objects get deleted and the Dough object is created.
+Currently each object is defined by a struct and have functions to allow the object to be created and transferred, as well as deconstructed and deleted. 
+None of the objects have a Sui price at the moment and a user needs to create a Flour, Salt, and Yeast object to call the create_dough function.
+When the create_dough function is called the Flour, Salt, and Yeast objects get deconstructed and deleted and the Dough object is created.
 When the user calls the create_bread function, they must have a Dough object, and they pass their Dough object to the create_bread function which deconstructs
 and deletes the Dough object and returns a Bread object.
 
@@ -26,7 +26,7 @@ and deletes the Dough object and returns a Bread object.
 
 The aim of the project is to demonstrate exchanging an object or objects for another object while deleting the first object/s, thus creating the illusion of transforming objects. In this project the goal is to be able to create simple objects and progressively transform them into more complex, and rare objects. The Flour, Salt, and Yeast can be transformed into Dough which can then be transformed into Bread.
 
-Due to testing and building limitations due to the Random.Move bug, (As of 12/11/23 is said to being fixed within a week of today). development wa slowed on on the next step of this project, namely first to create a sharable object bakery that will accept Sui in exchange for creating the objects, second to have an admin object passed in the contract's init function to enable the contract deployer to access the Sui from the bakery. The next step then is to build out frontend using the Suiet library and to use the Display library recently released by Sui Move to and attach a URL image for the objects, showing Bread as the most rare.
+Due to testing and building limitations due to the Random.Move bug described more below, (As of 12/11/23 is said to being fixed within a week of today), development was slowed on on the next step of this project. The next steps of this project will be to accept Sui in exchange for creating the objects, create an admin object passed in the contract's init function to enable the contract deployer to access the Sui spent to purchase objects, and create game_ids gfor all the obejects created. The final steps that will be completed are to build out frontend using the Suiet library, and to use the Display library recently released by Sui Move to and attach an URL image for the various objects, showing Bread as the most rare.
 
 ![bread king](./bread.png)
 
@@ -69,13 +69,15 @@ The workaround:
   ![failure to deploy](deploy.jpg)
 
 
-  To publish a contract using the cli:
+  Luckily the move-analyzer is very helpful in debuggint the Sui Move code in VS Code as you develop. 
+  
+  To publish a Sui Move package without the Random.Move error using the cli is done by the following command:
   
     sui client publish --gas-budget 10000000
    
   After the package is compiled it can be checked in the SUI explorer. To publish the package you also need to have an 
-  account with a positive sui balance. When you first publish a package in VS Code a new wallet is set up and to receive sui to the new devnet wallet you 
-  can go to the sui discord and in the channel for the sui devnet faucet enter the command:
+  account with a positive sui balance. When you first publish a package in VS Code a new wallet is set up and to receive Sui to the new devnet wallet you 
+  can go to the Sui discord and in the channel for the Sui devnet faucet enter the command:
   
       !faucet 0xaddress
   
@@ -106,11 +108,11 @@ The workaround:
 
 # How to run the project:
 
-To build a sui move project the normal command is:
+To build a Sui Move project the normal command is:
 
     sui move build
     
-However, as a result of the known bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to create a multitude of template projects but I chose the basic which created an empty source folder and an empty Move.toml file. The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
+However, as a result of the known bug and not getting the Sui binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to create a multitude of template projects but I chose the basic which created an empty source folder and an empty Move.toml file. The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
 
 First you need to set the Welldone wallet to developer mode.
 
