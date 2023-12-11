@@ -11,6 +11,8 @@
 # Project Overview:
 
 Welcome to the BAKERY, where to get that Bread, first you gotta make some Dough. 
+
+This project uses the SUI Move language to ...
 ---
 ---
 
