@@ -145,13 +145,16 @@ As the Random.Move error becomes fixed I will be able to run and see the results
 **Structure of Tests**
 
 Sets up the testing environment for the unit tests
+
 ![test 1](./test1.jpg)
 
 
 Test the objects Flour, Salt, Yeast object and deletes them 
+
 ![test 2](./test2.jpg)
 
 
-Test the objects Dough, Bread object and deletes them 
+Test the objects Dough, Bread object and deletes them then closes the testing environment
+
 ![test 3](./test3.jpg)
 
