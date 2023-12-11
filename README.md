@@ -76,7 +76,7 @@ The project built using this method allowed the functions to be tested but gave 
 
 First you need to set the Welldone wallet to developer mode.
 
-![welldone developer](./de_welldone)
+![welldone developer](./de_welldone.jpg)
 
 Below it can be shown after the file is compiled it appears in the area marked by number 1. Then after deploying the contract the objects, functions, ext. become visible in the area marked with the number 2. 
 
