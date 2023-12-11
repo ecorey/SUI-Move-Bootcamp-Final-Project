@@ -18,17 +18,17 @@
  
 The work around is to comment out these lines in the fun create(ctx: &mut TxContext) in the Random.Move file:
 
-  // let inner = RandomInner {
-  //     version, 
-  //     epoch: tx_context::epoch(ctx),
-  //     random_bytes: vector[],
-  // };
-
-  // let self = Rnadom {
-  //     id: object::randomness_state(),
-  //     inner: versioned::create(version, inner, ctx),
-  // };
-  // transfer::share_object(self)
+    // let inner = RandomInner {
+    //     version, 
+    //     epoch: tx_context::epoch(ctx),
+    //     random_bytes: vector[],
+    // };
+  
+    // let self = Rnadom {
+    //     id: object::randomness_state(),
+    //     inner: versioned::create(version, inner, ctx),
+    // };
+    // transfer::share_object(self)
 
   Then to build use this command:
 
