@@ -11,9 +11,29 @@
 - The devnet contract address.
 
   - As a Windows/ Linux VM user after needing to reinstall the SUI binaries I have recieved the known error pertaining to the Random.Move file. 
-  ![known error without fix](./Screenshot1.jpg) Being on the SUI Discord and asking about the issue I see it is a known issue with some workarounds proposed, but I was unable to get them to work. 
+  ![known error without fix](./Screenshot1.jpg) Being on the SUI Discord and asking about the issue I see it is a known issue with some workarounds proposed, but I was unable to get them to work.
 
-  To deploy a built Sui move package I would use the command: 
+[ 
+The work around is to comment out these lines in the fun create(ctx: &mut TxContext) in the Random.Move file:
+
+  // let inner = RandomInner {
+  //     version, 
+  //     epoch: tx_context::epoch(ctx),
+  //     random_bytes: vector[],
+  // };
+
+  // let self = Rnadom {
+  //     id: object::randomness_state(),
+  //     inner: versioned::create(version, inner, ctx),
+  // };
+  // transfer::share_object(self)
+
+  Then to build use this command:
+
+    
+
+  To deploy a built Sui move package I would use the command: sui move build --skip-fetch-latest-git-deps
+  ]
     
         sui client publish --gas-budget 10000000
    
