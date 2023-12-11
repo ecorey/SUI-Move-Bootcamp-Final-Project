@@ -1,18 +1,18 @@
 # SUI_Move_Bootcamp_Final_Project
 
-**Project Overview:**
+# **Project Overview:**
 
 ---
 ---
 
-**The explanation of the project including the aim of the project**
+# **The explanation of the project including the aim of the project:**
 
 
 
 ---
 ---
 
-**The devnet contract address.**
+# **The devnet contract address:**
 
 As a Windows/ Linux VM user after needing to reinstall the SUI binaries I have recieved the known error pertaining to the Random.Move file. 
 
@@ -60,7 +60,7 @@ The work around is to comment out these lines in the fun create(ctx: &mut TxCont
 ---
 ---
 
-**How to set up the project. In this part, you can also share the following link for Move on Sui setup: Install Sui to Build | Sui Docs**
+# **How to set up the project. In this part, you can also share the following link for Move on Sui setup: Install Sui to Build | Sui Docs:**
 
 As a reuslt of the knwon bug and not getting the SUI binaries to properly install on my machine it gave me the unique ability to use the Welldone wallet on the Remix IDE. With the Welldone wallet it is possible to crete a multiude of template projects but i chose the basic which created an empty source folder and an empty Move.toml file. 
 The project built using this method allowed the functions to be tested but gave limited access to the #[test] functions. 
@@ -79,7 +79,7 @@ After the object is created it can then be queried and the object details can be
 ---
 
 
-- **How to run the project.**
+# **How to run the project:**
 
 The project can be run by first building the project woth 
 
@@ -90,7 +90,7 @@ and the project can have the functions called using the Remix IDE with the Welld
 ---
 ---
 
-**How to test the project.**
+# **How to test the project.**
 
         sui move test
 
